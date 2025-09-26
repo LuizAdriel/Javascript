@@ -1,11 +1,13 @@
-// Importando a função do arquivo onde ela está definida (por exemplo, idade.js)
-const { idade } = require('./idade');
 
-// Exemplo de uso da função
-const nome = 'João';
-const anoNascimento = 1990;
+//const funcoes_matematicas = require('./funcoes_matematicas');
+//const calculadora = require('./calculadora');
+import {somar,subtrair,multiplicar,dividir} from './funcoes_matematicas.js';
+import * as calculadora_idade from './calculadora_idade.js';
 
-const mensagem = idade(nome, anoNascimento);
 
-// Exibindo a mensagem no console
-console.log(mensagem);
+console.log("Soma: " + somar(5,3, 5));
+console.log("Subtração: " + subtrair(5,3));
+console.log("Multiplicação: " + multiplicar(5,3));
+console.log("Divisão: " + dividir(5,0));
+
+console.log("calculadora_idade.idade(\"João\", 1976, 2050)");
