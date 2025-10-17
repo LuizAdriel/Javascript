@@ -19,6 +19,10 @@ app.use('/users', usersroutes );
 const esportesRoutes = require('./routes/esportes');
 app.use('/esportes', esportesRoutes);
 
+const produtos = require('./routes/produtos');
+app.use('/produtos', produtos);
+
+
 // Servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
