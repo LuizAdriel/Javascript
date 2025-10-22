@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const siteContoller = require('../controllers/siteController');
+const produtosController = require('../controllers/siteController');
 
-router.get("/" ,siteContoller.exibirProdutos);
-router.get("/camisetas" ,siteContoller.exibirCamisas);
+router.get("/" ,produtosController.exibirProdutos);
+router.get("/camisetas" ,produtosController.exibirCamisas);
 
 
 module.exports = router;
