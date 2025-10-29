@@ -1,14 +1,15 @@
-// clientesModel.js
+const { login } = require("../controllers/clientesController");
 
-// Simulando um banco de dados (pode ser trocado por MySQL ou SQLite depois)
-const clientes = [
-  { id: 1, nome: "João Silva", email: "cliente@exemplo.com", senha: "1234" },
-  { id: 2, nome: "Maria Souza", email: "maria@teste.com", senha: "abcd" }
-];
+module.exports = {
 
-// Função para buscar cliente por e-mail e senha
-function buscarCliente(email, senha) {
-  return clientes.find(c => c.email === email && c.senha === senha);
+  gerarMensagemLogin: (login, senha) => {
+    let acesso;
+
+    if (login === "Joédio" && senha === "123456") {
+      acesso = "liberado";
+    } else {
+      acesso = "negado";
+    }
+    return 'olá, ${login}! seu acesso foi $(acesso). ';
+  }
 }
-
-module.exports = { buscarCliente };
