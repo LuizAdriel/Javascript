@@ -10,6 +10,6 @@ module.exports = {
     } else {
       acesso = "negado";
     }
-    return 'olá, ${login}! seu acesso foi $(acesso). ';
+    return `olá, ${login}! seu acesso foi ${acesso}. `;
   }
 }
